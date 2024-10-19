@@ -108,12 +108,10 @@ const patchCompletion = async (id)=>{
 
     let url = `${api}?id=eq.${id}`;
 
-    let task= inputTask.value
-    let completed= inputComplete.value
+    
 
     let patchData= {
-        task,
-        completed,
+        completed : true
     }
     
         let response = await fetch(url,{
@@ -127,11 +125,14 @@ const patchCompletion = async (id)=>{
         })
 
         if(response.ok){
+            
             getTasks()
 
         }else{
             let responseBody = await response.json();
             console.log(responseBody)
         }
+
+        
 
 }

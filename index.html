@@ -22,27 +22,31 @@
     <h1 class="Display-1">To Do List</h1>
     <main class="container">
       <form onsubmit="addTask()">
-        <div>
-          <label for="inputTask">Task</label>
-          <input id="inputTask" type="text" required>
-
-        <label for="inputComplete">Status</label>
-          <select id="inputComplete">
-            <option value="">--Select Option--</option>
-            <option value="true">Completed</option>
-            <option value="false">Not Completed</option>
-          </select>
-          <button class="btn btn-success mt-2">Add Task</button>
+        <div class="mb-3">
+          <label for="inputTask" class="form-label">Task</label>
+          <input type="text" class="form-control" id="inputTask" />
+          <div id="inputTask" class="form-text">
+            What task are you doing today?
+          </div>
         </div>
+        <select id="inputComplete"
+          class="form-select form-select-lg mb-3"
+          aria-label="Large select example"
+        >
+          <option value="">--Select Option--</option>
+          <option value="true">Completed</option>
+          <option value="false">Not Completed</option>
+        </select>
+
+        <button type="submit" class="btn btn-success mt-2">Add Task</button>
       </form>
 
       <div>
-        
-       <table id="toDoTable" class="table table-striped-columns table-hover"> </table>
-
+        <table
+          id="toDoTable"
+          class="table table-striped-columns table-hover"
+        ></table>
       </div>
-
-
     </main>
 
     <script src="script.js"></script>
