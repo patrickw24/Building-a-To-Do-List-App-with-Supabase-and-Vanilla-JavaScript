@@ -21,7 +21,7 @@ const getTasks= async ()=>{
 
 }
 
-getTasks()
+
 
 
 const renderTable = (data)=>{

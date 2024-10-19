@@ -23,7 +23,7 @@
     <main class="container">
       <form onsubmit="addTask()">
         <div class="mb-3">
-          <label for="inputTask" class="form-label">Task</label>
+          <label for="inputTask" class="form-label" required>Task</label>
           <input type="text" class="form-control" id="inputTask" />
           <div id="inputTask" class="form-text">
             What task are you doing today?
@@ -38,7 +38,7 @@
           <option value="false">Not Completed</option>
         </select>
 
-        <button type="submit" class="btn btn-success mt-2">Add Task</button>
+        <button type="submit" class="btn btn-success mt-2 mb-3">Add Task</button>
       </form>
 
       <div>
